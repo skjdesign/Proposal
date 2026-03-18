@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKJ Design — Advertising & Print Rate Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --teal:     #67C9CB;
+  --teal-mid: #45ABAE;
+  --teal-dk:  #2A8082;
+  --gold:     #67C9CB;
+  --gold-lt:  #45ABAE;
+  --ink:      #0F0F0F;
+  --ink2:     #1C1C1C;
+  --ink3:     #2A2A2A;
+  --mid:      #666666;
+  --light:    #999999;
+  --rule:     #2E2E2E;
+  --pale:     #F5F2ED;
+  --white:    #FDFCFA;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+
+body {
+  background: var(--ink);
+  color: var(--white);
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+/* ── COVER PAGE ── */
+.cover { padding-left: 64px; padding-right: 64px;
+  min-height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  padding: 48px 60px;
+  position: relative;
+  overflow: hidden;
+  background: var(--ink);
+}
+
+/* Gradient orb background */
+.cover::before {
+  content: '';
+  position: absolute;
+  top: -200px; right: -150px;
+  width: 700px; height: 700px;
+  background: radial-gradient(ellipse at center, rgba(103,201,203,0.18) 0%, rgba(103,201,203,0.06) 45%, transparent 70%);
+  pointer-events: none;
+}
+.cover::after {
+  content: '';
+  position: absolute;
+  bottom: -100px; left: -200px;
+  width: 600px; height: 400px;
+  background: radial-gradient(ellipse at bottom left, rgba(103,201,203,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.cover-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative; z-index: 1;
+}
+
+.logo-block {
+  display: flex; flex-direction: column; gap: 2px;
+}
+.logo-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+}
+.logo-sub {
+  font-size: 11px;
+  color: var(--light);
+  letter-spacing: 0.08em;
+}
+
+.cover-nav {
+  display: flex; gap: 36px;
+}
+.cover-nav a {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--light);
+}
+
+/* Cover centre */
+.cover-centre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px 0;
+  position: relative; z-index: 1;
+}
+
+.cover-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 28px;
+  display: flex; align-items: center; gap: 12px;
+}
+.cover-eyebrow::after {
+  content: '';
+  display: block; height: 1px; width: 60px;
+  background: linear-gradient(90deg, var(--teal), transparent);
+}
+
+.cover-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: clamp(52px, 7vw, 96px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  color: var(--white);
+  margin-bottom: 12px;
+}
+.cover-title span {
+  display: block;
+  background: linear-gradient(135deg, var(--teal) 0%, #A8E4E5 60%, var(--white) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.cover-desc {
+  font-size: 16px;
+  color: rgba(253,252,250,0.5);
+  margin-top: 28px;
+  max-width: 420px;
+  line-height: 1.7;
+}
+
+/* Rate hero badge */
+.rate-hero {
+  display: inline-flex;
+  flex-direction: column;
+  margin-top: 64px;
+  position: relative;
+}
+.rate-hero::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--teal), var(--teal-mid) 60%, var(--teal-dk));
+  z-index: 0;
+}
+.rate-hero-inner { padding-left: 32px;
+  position: relative; z-index: 1;
+  background: var(--ink2);
+  border-radius: 19px;
+  padding: 32px 48px;
+  display: flex; align-items: baseline; gap: 12px;
+}
+.rate-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 72px;
+  line-height: 1;
+  background: linear-gradient(135deg, var(--teal) 0%, #C8ECEC 60%, var(--white) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.rate-period {
+  font-size: 18px;
+  color: var(--light);
+  font-weight: 300;
+}
+.rate-note { padding: 14px 0 20px 0; margin-left: 4px;
+  font-size: 12px;
+  color: var(--light);
+  margin-top: 12px;
+  padding: 0 4px;
+  position: relative; z-index: 1;
+  letter-spacing: 0.03em;
+}
+
+/* Cover bottom */
+.cover-bottom {
+  position: relative; z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+.cover-contact {
+  font-size: 13px;
+  color: var(--light);
+  line-height: 1.8;
+}
+.cover-contact strong {
+  color: var(--white);
+  font-weight: 500;
+  display: block;
+  margin-bottom: 4px;
+}
+.cover-contact a { color: var(--teal); text-decoration: none; }
+
+.cover-tagline {
+  font-family: 'DM Serif Display', serif;
+  font-size: 13px;
+  font-style: italic;
+  color: rgba(103,201,203,0.45);
+  text-align: right;
+  max-width: 200px;
+  line-height: 1.6;
+}
+
+/* ── RATE SHEET PAGE ── */
+.rate-page {
+  background: var(--ink);
+  padding: 72px 60px;
+  position: relative;
+  page-break-before: always;
+}
+
+.rate-page::before {
+  content: '';
+  position: absolute;
+  top: 0; right: 0;
+  width: 500px; height: 300px;
+  background: radial-gradient(ellipse at top right, rgba(103,201,203,0.07) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 56px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--rule);
+}
+.page-header-left {}
+.page-eyebrow {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
+}
+.page-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 38px;
+  color: var(--white);
+  line-height: 1.1;
+}
+.page-header-right {
+  text-align: right;
+}
+.page-rate-pill {
+  display: inline-flex;
+  align-items: center; gap: 8px;
+  padding: 8px 18px;
+  border-radius: 100px;
+  background: linear-gradient(135deg, rgba(103,201,203,0.15), rgba(103,201,203,0.05));
+  border: 1px solid rgba(103,201,203,0.3);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+.page-rate-pill::before {
+  content: '';
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--teal);
+  box-shadow: 0 0 8px var(--teal);
+}
+.page-note-sm {
+  font-size: 11px;
+  color: var(--light);
+}
+
+/* Rate sections */
+.rate-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.rate-section {}
+
+.section-header {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 2px;
+  padding: 14px 0;
+}
+.section-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 13px;
+  color: var(--teal);
+  opacity: 0.7;
+}
+.section-title {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--teal);
+  padding-bottom: 12px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg, var(--teal), transparent) 1;
+}
+
+/* Table */
+.rate-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rate-table thead th {
+  padding: 10px 16px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--light);
+  text-align: left;
+  border-bottom: 1px solid var(--rule);
+  background: transparent;
+}
+.rate-table thead th:last-child { text-align: right; }
+.rate-table thead th:nth-child(2) { text-align: center; }
+
+.rate-table tbody tr {
+  transition: background 0.12s;
+}
+.rate-table tbody tr:hover {
+  background: rgba(103,201,203,0.04);
+}
+.rate-table tbody td {
+  padding: 11px 16px;
+  font-size: 14px;
+  color: rgba(253,252,250,0.8);
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  vertical-align: middle;
+}
+.rate-table tbody tr:last-child td { border-bottom: none; }
+
+.td-hours {
+  text-align: center;
+  color: var(--light) !important;
+  font-size: 13px !important;
+  white-space: nowrap;
+}
+.td-cost {
+  text-align: right;
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px !important;
+  color: var(--teal) !important;
+  white-space: nowrap;
+}
+.td-del { width: 52%; }
+.td-h   { width: 20%; }
+.td-c   { width: 28%; }
+
+/* Two-column layout for the rate sections */
+.two-col-sections {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 48px;
+}
+
+/* ── TERMS PAGE ── */
+.terms-page {
+  background: var(--ink);
+  padding: 72px 60px;
+  position: relative;
+}
+.terms-page::before {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 400px; height: 300px;
+  background: radial-gradient(ellipse at bottom left, rgba(103,201,203,0.05) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+.terms-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  margin-top: 48px;
+}
+
+.terms-col {}
+.terms-block {
+  margin-bottom: 40px;
+}
+.terms-block-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid;
+  border-image: linear-gradient(90deg, var(--teal-dk), transparent) 1;
+}
+.terms-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  gap: 16px;
+}
+.terms-row:last-child { border-bottom: none; }
+.terms-label {
+  font-size: 13px;
+  color: var(--light);
+  flex-shrink: 0;
+  min-width: 120px;
+}
+.terms-val {
+  font-size: 13px;
+  color: var(--white);
+  text-align: right;
+  font-weight: 500;
+}
+.terms-val.gold {
+  color: var(--teal);
+  font-family: 'DM Serif Display', serif;
+  font-size: 15px;
+}
+
+.process-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+.process-step {
+  display: grid;
+  grid-template-columns: 28px 1fr;
+  gap: 14px;
+  padding: 14px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+.process-step:last-child { border-bottom: none; }
+.step-n {
+  font-family: 'DM Serif Display', serif;
+  font-size: 18px;
+  color: rgba(103,201,203,0.4);
+  line-height: 1.4;
+}
+.step-body {}
+.step-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 3px;
+}
+.step-desc {
+  font-size: 12px;
+  color: var(--light);
+  line-height: 1.6;
+}
+
+/* Contact card */
+.contact-card {
+  border-radius: 20px;
+  padding: 32px;
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+.contact-card::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(103,201,203,0.12) 0%, rgba(103,201,203,0.04) 50%, rgba(160,120,40,0.06) 100%);
+  border-radius: 20px;
+}
+.contact-card::after {
+  content: '';
+  position: absolute; inset: 0;
+  border-radius: 20px;
+  border: 1px solid;
+  border-image: linear-gradient(135deg, rgba(103,201,203,0.5), rgba(103,201,203,0.15) 50%, rgba(103,201,203,0.35)) 1;
+  pointer-events: none;
+}
+.contact-card-inner {
+  position: relative; z-index: 1;
+}
+.contact-name {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.contact-role {
+  font-size: 12px;
+  color: var(--light);
+  letter-spacing: 0.05em;
+  margin-bottom: 24px;
+}
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.contact-link {
+  font-size: 13px;
+  color: rgba(103,201,203,0.75);
+  text-decoration: none;
+  display: flex; align-items: center; gap: 8px;
+}
+.contact-link::before {
+  content: '→';
+  font-size: 11px;
+  color: var(--teal-dk);
+}
+
+/* Footer disclaimer */
+.rate-footer {
+  margin-top: 56px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+}
+.rate-footer p {
+  font-size: 11px;
+  color: var(--light);
+  line-height: 1.6;
+  max-width: 560px;
+}
+.footer-brand {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--teal);
+  opacity: 0.5;
+  white-space: nowrap;
+}
+
+/* Print */
+@media print {
+  body { background: white; color: black; }
+  .cover { padding-left: 64px; padding-right: 64px; min-height: auto; padding: 36px 48px; }
+  .cover::before, .cover::after, .rate-page::before, .terms-page::before { display: none; }
+  .rate-number, .cover-title span { -webkit-text-fill-color: #67C9CB; }
+  .rate-table tbody tr:hover { background: none; }
+  .rate-page, .terms-page { page-break-before: always; }
+}
+
+@page {
+  margin: 0;
+  size: A4;
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════ COVER PAGE -->
+<div class="cover">
+  <div class="cover-top">
+    <div class="logo-block">
+      
+      <span class="logo-sub">Communication Design · Mumbai</span>
+    </div>
+    <nav class="cover-nav">
+      <a href="#rates">Rates</a>
+      <a href="#terms">Terms</a>
+    </nav>
+  </div>
+
+  <div class="cover-centre">
+    <div class="cover-eyebrow">Hourly Rate Guide</div>
+    <h1 class="cover-title">
+      Advertising<br>
+      <span>&amp; Print Creatives</span>
+    </h1>
+    <p class="cover-desc">
+      Indicative estimates for digital ad creatives, banners, outdoor formats, press and magazine ads, and brochures — all produced at a single hourly rate.
+    </p>
+
+    <div class="rate-hero">
+      <div class="rate-hero-inner">
+        <div class="rate-number">₹1,500</div>
+        <div class="rate-period">per hour</div>
+      </div>
+      <div class="rate-note" style="color:#FDFCFA; opacity:0.85;">2 hour minimum &nbsp;·&nbsp; All estimates indicative &nbsp;·&nbsp; Fixed-fee available once scope is defined</div>
+    </div>
+  </div>
+
+  <div class="cover-bottom">
+    <div class="cover-contact">
+      <strong>Sonali Khivasara Jogi</strong>
+      Independent Communication Designer<br>
+      <a href="https://www.skj-design.in">www.skj-design.in</a> &nbsp;&nbsp;
+      sonali.gkj@gmail.com &nbsp;&nbsp;
+      +91 9819515280
+    </div>
+    <div class="cover-tagline">Senior design,<br>on your terms.</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ RATE SHEET PAGE -->
+<div class="rate-page" id="rates">
+  <div class="rate-page::before"></div>
+
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-eyebrow">Deliverables &amp; Estimates</div>
+      <h2 class="page-title">Rate Sheet</h2>
+    </div>
+    <div class="page-header-right">
+      <div class="page-rate-pill">₹1,500 / hr</div>
+      <div class="page-note-sm">All costs at standard rate · Rush: ₹2,250/hr</div>
+    </div>
+  </div>
+
+  <div class="rate-sections">
+
+    <!-- Row 1: Digital + Banners -->
+    <div class="two-col-sections">
+
+      <div class="rate-section">
+        <div class="section-header">
+          <span class="section-number">01</span>
+          <span class="section-title">Digital Ad Creatives</span>
+        </div>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th class="td-del">Deliverable</th>
+              <th class="td-h">Hours</th>
+              <th class="td-c">Indicative Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Static social ad — single format</td><td class="td-hours">2 – 3 hrs</td><td class="td-cost">₹3,000 – ₹4,500</td></tr>
+            <tr><td>Static social ad — 3 size set</td><td class="td-hours">4 – 6 hrs</td><td class="td-cost">₹6,000 – ₹9,000</td></tr>
+            <tr><td>Campaign — 3 concepts × 1 format</td><td class="td-hours">8 – 12 hrs</td><td class="td-cost">₹12,000 – ₹18,000</td></tr>
+            <tr><td>Campaign — 3 concepts × 3 formats</td><td class="td-hours">14 – 20 hrs</td><td class="td-cost">₹21,000 – ₹30,000</td></tr>
+            <tr><td>Carousel ad — 5 frames</td><td class="td-hours">4 – 6 hrs</td><td class="td-cost">₹6,000 – ₹9,000</td></tr>
+            <tr><td>Google Display — standard set (5 sizes)</td><td class="td-hours">6 – 10 hrs</td><td class="td-cost">₹9,000 – ₹15,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rate-section">
+        <div class="section-header">
+          <span class="section-number">02</span>
+          <span class="section-title">Web Banners</span>
+        </div>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th class="td-del">Deliverable</th>
+              <th class="td-h">Hours</th>
+              <th class="td-c">Indicative Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Web banner — single size</td><td class="td-hours">2 – 4 hrs</td><td class="td-cost">₹3,000 – ₹6,000</td></tr>
+            <tr><td>Email banner — single</td><td class="td-hours">2 – 3 hrs</td><td class="td-cost">₹3,000 – ₹4,500</td></tr>
+          </tbody>
+        </table>
+
+        <div class="section-header" style="margin-top: 36px;">
+          <span class="section-number">03</span>
+          <span class="section-title">Hoardings &amp; Billboards</span>
+        </div>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th class="td-del">Deliverable</th>
+              <th class="td-h">Hours</th>
+              <th class="td-c">Indicative Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Billboard / hoarding — single design</td><td class="td-hours">4 – 8 hrs</td><td class="td-cost">₹6,000 – ₹12,000</td></tr>
+            <tr><td>Conceptual Billboard</td><td class="td-hours">6 – 10 hrs</td><td class="td-cost">₹9,000 – ₹15,000</td></tr>
+            <tr><td>Bus shelter / transit panel</td><td class="td-hours">3 – 6 hrs</td><td class="td-cost">₹4,500 – ₹9,000</td></tr>
+            <tr><td>OOH campaign — 3 creatives × 2 formats</td><td class="td-hours">12 – 20 hrs</td><td class="td-cost">₹18,000 – ₹30,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+    <!-- Row 2: Print + Brochures -->
+    <div class="two-col-sections">
+
+      <div class="rate-section">
+        <div class="section-header">
+          <span class="section-number">04</span>
+          <span class="section-title">Print Ads</span>
+        </div>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th class="td-del">Deliverable</th>
+              <th class="td-h">Hours</th>
+              <th class="td-c">Indicative Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Half-page press ad</td><td class="td-hours">4 – 6 hrs</td><td class="td-cost">₹6,000 – ₹9,000</td></tr>
+            <tr><td>Full-page press ad</td><td class="td-hours">6 – 10 hrs</td><td class="td-cost">₹9,000 – ₹15,000</td></tr>
+            <tr><td>Full-page magazine ad — high finish</td><td class="td-hours">8 – 14 hrs</td><td class="td-cost">₹12,000 – ₹21,000</td></tr>
+            <tr><td>Double-page spread</td><td class="td-hours">10 – 16 hrs</td><td class="td-cost">₹15,000 – ₹24,000</td></tr>
+            <tr><td>Campaign — 3 executions, full page each</td><td class="td-hours">16 – 24 hrs</td><td class="td-cost">₹24,000 – ₹36,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="rate-section">
+        <div class="section-header">
+          <span class="section-number">05</span>
+          <span class="section-title">Brochures</span>
+        </div>
+        <table class="rate-table">
+          <thead>
+            <tr>
+              <th class="td-del">Deliverable</th>
+              <th class="td-h">Hours</th>
+              <th class="td-c">Indicative Cost</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>4-page brochure / leaflet</td><td class="td-hours">8 – 14 hrs</td><td class="td-cost">₹12,000 – ₹21,000</td></tr>
+            <tr><td>8-page brochure</td><td class="td-hours">14 – 22 hrs</td><td class="td-cost">₹21,000 – ₹33,000</td></tr>
+            <tr><td>12-page brochure</td><td class="td-hours">18 – 28 hrs</td><td class="td-cost">₹27,000 – ₹42,000</td></tr>
+            <tr><td>16-page brochure</td><td class="td-hours">24 – 36 hrs</td><td class="td-cost">₹36,000 – ₹54,000</td></tr>
+            <tr><td>Corporate capability statement — 4pp</td><td class="td-hours">8 – 12 hrs</td><td class="td-cost">₹12,000 – ₹18,000</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="rate-footer">
+    <p>All estimates indicative. Fixed-fee scope available once deliverables are defined.</p>
+    <div class="footer-brand">SKJ Design</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════ TERMS PAGE -->
+<div class="terms-page" id="terms">
+
+  <div class="page-header">
+    <div class="page-header-left">
+      <div class="page-eyebrow">How It Works</div>
+      <h2 class="page-title">Terms &amp; Process</h2>
+    </div>
+    <div class="page-header-right">
+      <div class="page-rate-pill">Simple. Transparent.</div>
+    </div>
+  </div>
+
+  <div class="terms-grid">
+    <div class="terms-col">
+
+      <div class="terms-block">
+        <div class="terms-block-title">Rates at a glance</div>
+        <div class="terms-row">
+          <span class="terms-label">Standard rate</span>
+          <span class="terms-val gold">₹1,500 / hr</span>
+        </div>
+        <div class="terms-row">
+          <span class="terms-label">Rush rate</span>
+          <span class="terms-val gold">₹2,250 / hr</span>
+        </div>
+        <div class="terms-row">
+          <span class="terms-label">Minimum session</span>
+          <span class="terms-val">2 hours</span>
+        </div>
+        <div class="terms-row">
+          <span class="terms-label">Deposit</span>
+          <span class="terms-val">₹3,000 (2 hrs upfront)</span>
+        </div>
+        <div class="terms-row">
+          <span class="terms-label">Payment</span>
+          <span class="terms-val">Deposit upfront · Balance on delivery</span>
+        </div>
+        <div class="terms-row">
+          <span class="terms-label">File formats</span>
+          <span class="terms-val">PDF/X-1a · Figma source · Web formats</span>
+        </div>
+        <div class="terms-row">
+          <span class="terms-label">Rush turnaround</span>
+          <span class="terms-val">Under 48 hrs · Pre-confirmed only</span>
+        </div>
+        <div class="terms-row">
+          <span class="terms-label">Unused hours</span>
+          <span class="terms-val">Credited to next project</span>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="terms-col">
+
+      <div class="terms-block">
+        <div class="terms-block-title">How a session works</div>
+        <div class="process-steps">
+          <div class="process-step">
+            <span class="step-n">01</span>
+            <div class="step-body">
+              <div class="step-title">Email with brief</div>
+              <div class="step-desc">Tell me what you need, the format, and when you need it. One paragraph is enough.</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-n">02</span>
+            <div class="step-body">
+              <div class="step-title">Estimate &amp; cap agreed</div>
+              <div class="step-desc">I'll send an hour estimate and available slot within 24 hours. We agree a cap before any work begins.</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-n">03</span>
+            <div class="step-body">
+              <div class="step-title">Deposit confirms booking</div>
+              <div class="step-desc">₹3,000 deposit secures the slot. Deducted from the final invoice.</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-n">04</span>
+            <div class="step-body">
+              <div class="step-title">Work &amp; review in Figma</div>
+              <div class="step-desc">Hours tracked from first task. You review live in a shared Figma file throughout.</div>
+            </div>
+          </div>
+          <div class="process-step">
+            <span class="step-n">05</span>
+            <div class="step-body">
+              <div class="step-title">Files delivered</div>
+              <div class="step-desc">Print-ready PDF, Figma source, and web formats. Balance invoiced on delivery — 3 day payment terms.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="contact-card">
+    <div class="contact-card-inner">
+      <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 24px;">
+        <div>
+          <div class="contact-name">Sonali Khivasara Jogi</div>
+          <div class="contact-role">Independent Communication Designer · Mumbai, India</div>
+          <div class="contact-links">
+            <a class="contact-link" href="https://www.skj-design.in">www.skj-design.in</a>
+            <a class="contact-link" href="mailto:sonali.gkj@gmail.com">sonali.gkj@gmail.com</a>
+            <a class="contact-link" href="tel:+919819515280">+91 9819515280</a>
+          </div>
+        </div>
+        <div style="text-align: right;">
+          <div style="font-family: 'DM Serif Display', serif; font-size: 32px; line-height: 1; background: linear-gradient(135deg, var(--teal), #A8E4E5); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">₹1,500</div>
+          <div style="font-size: 12px; color: var(--light); margin
